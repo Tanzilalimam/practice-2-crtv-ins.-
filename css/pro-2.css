@@ -13,6 +13,9 @@ ul li{
 a{
     text-decoration: none;
 }
+p{
+    margin: 0;
+}
 .cmmn-btn{
     width: 138px;
     height: 54px;
@@ -34,10 +37,15 @@ a{
     margin: 0 auto;
     width: 1320px;
 }
+.flx{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 /* common css ends */
 
 /* navbar starts */
-.nav{
+.menu{
     margin: 39px 120px;
     display: flex;
     justify-content: space-between;
@@ -46,20 +54,20 @@ a{
 .logo img{
     width: 148px;
 }
-.nav ul{
+.menu ul{
     display: flex;
     gap: 80px;
 }
-.nav ul li{
+.menu ul li{
     text-transform: capitalize;
     font-size: 18px;
     font-weight: 500;
 }
-.nav ul li a{
+.menu ul li a{
     color: black;
     transition: all linear .4s;
 }
-.nav ul li a:hover{
+.menu ul li a:hover{
     color: blue;
 }
 
@@ -142,7 +150,7 @@ h1{
     gap: 30px;
     text-transform: uppercase;
 }
-.prt h4{
+.prt h3{
     font-size: 48px;
     font-weight: 700;
 }
@@ -161,6 +169,409 @@ p.dash{
 /* poster css ends */
 
 /* dashboard css starts */
-
-
+#dashboard{
+    margin-top: 0;
+    background-color: #201353;
+}
+#dashboard h2{
+    padding-top: 100px;
+    width: 514px;
+    color: white;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: capitalize;
+}
+.card-section{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.cards{
+    padding: 24px;
+    width: 368px;
+    height: 188px;
+    background-color: #2c1a74;
+    border-radius: 16px;
+    transition: all linear .3s;
+}
+.cards:hover{
+    background-color: white;
+}
+.cards .head{
+    display: flex;
+    gap: 11px;
+}
+.head i{
+    font-size: 26px;
+    color: white;
+}
+.cards:hover .head i{
+    color: #6245d5;
+}
+.head h5{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: capitalize;
+}
+.cards:hover .head h5{
+    color: #192252;
+}
+.cards p{
+    margin-top: 16px;
+    width: 320px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+.cards:hover p{
+    color: #848fac;
+}
+.bars{
+    margin-top: 24px;
+    display: flex;
+}
+.bar:first-child{
+    width: 173px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    position: relative;
+}
+.cards:hover .bar:first-child{
+    background-color: #6245d5;
+}
+/* .bar:first-child::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all linear .3s;
+}
+.bar:first-child::after{
+    width: 100%;
+    background-color: #6245d5;
+} */
+.bar:last-child{
+    width: 147px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+}
+.cards:hover .bar:last-child{
+    background-color: #eff3fa;
+}
+.img-sec{
+    padding-top: 100px;
+}
+.img-sec p{
+    margin: 30px 0 0 80px;
+    width: 555px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 180%;
+    text-transform: capitalize;
+}
+.group-img{
+    margin-top: 88px;
+    width: 731px;
+}
 /* dashboard css ends */
+
+/* pay & recieve css starts */
+#pay-receive{
+    margin-top: 100px;
+}
+.video{
+    width: 600px;
+    height: 600px;
+    background-color: #939393;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+.play-btn{
+    width: 120px;
+    height: 120px;
+    background-color: #6d6d6d;
+    border-radius: 50%;
+    position: relative;
+}
+.play-btn i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    color: #192252;
+    transform: translate(-50%, -50%);
+}
+.offer-details h2{
+    margin-top: 30px;
+    width: 514px;
+    color: #192252;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 120%;
+}
+.offer-details p{
+    margin-top: 24px;
+    width: 421px;
+    color: #848fac;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.offers{
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-direction: column;
+}
+.offer-list{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 29px;
+}
+.offer-list i{
+    font-size: 22px;
+    color: #219653;
+}
+.offer-list p{
+    margin: 0;
+    color: #192252;
+    font-size: 20px;
+    font-weight: 600;
+}
+.support{
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+.support p{
+    color: #848fac;
+    font-size: 24px;
+    font-weight: 500;
+}
+.companies{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+.company{
+    width: 140px;
+    object-fit: cover;
+}
+
+/* pay & recieve css ends */
+
+/* plan css starts */
+#plan{
+    margin-top: 100px;
+}
+#plan h2{
+    color: #192252;
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
+#plan .pp{
+    margin-top: 24px;
+    color: #848fac;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.package-planning{
+    display: flex;
+    justify-content: space-around;
+}
+.package-sector{
+    margin-top: 64px;
+}
+.packages{
+    margin-top: 24px;
+    padding: 24px;
+    width: 515px;
+    height: 118px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid #eff3fa;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+.packages:hover{
+    background-color: #6245d5;
+}
+.para{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.para input{
+    width: 24px;
+    height: 24px;
+}
+.package-type h5{
+    color: #192252;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.packages:hover .package-type h5{
+    color: white;
+}
+.package-type p{
+    margin-top: 8px;
+    width: 236px;
+    color: #848fac;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+}
+.packages:hover .package-type p{
+    color: rgba(255, 255, 255, 0.64);
+}
+.price{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.price h4{
+    color: #192252;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.packages:hover .price h4{
+    color: white;
+}
+.price p{
+    color: #848fac;
+    font-size: 16px;
+    font-weight: 500;
+}
+.packages:hover .price p{
+    color: rgba(255, 255, 255, 0.64);
+}
+.planning-sector{
+    margin-top: 88px;
+    padding: 48px;
+    width: 525px;
+    height: 544px;
+    background-color: #f7f7f7;
+    border-radius: 16px;
+}
+/* toggle button starts */
+.toggle-btn{
+    width: 190px;
+    height: 52px;
+    display: inline-block;
+    position: relative;
+}
+.toggle-cbox{
+    display: none;
+}
+.slider{
+    background-color: rgb(207, 207, 207);
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+.slider::before{
+    content: "monthly";
+    width: 190px;
+    height: 52px;
+    background-color: white;
+    color: #848fac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all linear .4s;
+}
+.toggle-cbox:checked + .slider::before{
+    content: "yearly";
+    background-color: #fc9770;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(165px);
+}
+.slider::after{
+    content: "monthly";
+    width: 190px;
+    height: 52px;
+    background-color: white;
+    color: #848fac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all linear .4s;
+}
+.toggle-cbox:checked + .slider::before{
+    content: "yearly";
+    background-color: #fc9770;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(165px);
+}
+
+/* toggle button ends */
+.features{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+}
+.feature-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feature-detail p{
+    color: #192252;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.feature-detail i{
+    color: #6245d5;
+    font-size: 18px;
+}
+/* plan css ends */
