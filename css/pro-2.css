@@ -575,3 +575,144 @@ p.dash{
     font-size: 18px;
 }
 /* plan css ends */
+
+/* review css starts */
+#review{
+    margin-top: 100px;
+    height: 878px;
+    background-color: #201353;
+}
+.opinion-sec{
+    margin-top: 124px;
+}
+.opinion-sec h2{
+    width: 448px;
+    color: white;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: capitalize;
+}
+.opinion-sec p{
+    margin-top: 24px;
+    width: 434px;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.mark{
+    margin: 64px 0 24px 0;
+    width: 66px;
+}
+.review-slider{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.review-img{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.review-img img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review-slider-btn{
+    width: 65px;
+    height: 65px;
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.review-slider-btn i{
+    color: white;
+    font-size: 22px;
+}
+.form-sec{
+    margin-top: 124px;    
+    padding: 80px;
+    width: 600px;
+    height: 678px;
+    background-color: rgba(255, 255, 255, 0.12);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 24px;
+    flex-direction: column;
+    border-radius: 24px;
+}
+.form-sec h3{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.form label{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: capitalize;
+}
+.mail{
+    padding: 0 1rem;
+    width: 440px;
+    height: 52px;
+    color: #848fac;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: lowercase;
+}
+.mail:focus{
+    outline: 0;
+}
+.txtarea{
+    padding: 1rem 1rem;
+    width: 440px;
+    height: 80px;
+    color: #848fac;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+.txtarea:focus{
+    outline: 0;
+}
+.form-btn{
+    margin-top: 16px;
+    width: 440px;
+    height: 64px;
+    background-color: rgba(252, 152, 112, 0.3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all linear .3s;
+    cursor: pointer;
+}
+.form-btn:hover{
+    background-color: #fc9770;
+}
+.free-trial a{
+    color: white;
+}
+
+/* review css ends */
