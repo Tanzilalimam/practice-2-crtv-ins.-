@@ -289,16 +289,13 @@ p.dash{
 #pay-receive{
     margin-top: 100px;
 }
-.video{
+.video img{
     width: 600px;
     height: 600px;
-    background-color: #939393;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: cover;
     border-radius: 24px;
 }
-.play-btn{
+/* .play-btn{
     width: 120px;
     height: 120px;
     background-color: #6d6d6d;
@@ -312,7 +309,7 @@ p.dash{
     font-size: 40px;
     color: #192252;
     transform: translate(-50%, -50%);
-}
+} */
 .offer-details h2{
     margin-top: 30px;
     width: 514px;
@@ -716,3 +713,87 @@ p.dash{
 }
 
 /* review css ends */
+
+/* footer css starts */
+footer{
+    padding-top: 100px;
+    height: 500px;
+    background-color: #201353;
+}
+.foot-sec{
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.foot-img p{
+    margin-top: 8px;
+    width: 332px;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.footer-links{
+    display: flex;
+    gap: 100px;
+}
+.links{
+    margin-top: 1px;
+}
+.links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.links ul li h5{
+    margin-bottom: 16px;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.links ul li a{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.copyright-sec{
+    margin: 36px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright p{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.social-links{
+    display: flex;
+    gap: 16px;
+}
+.sc-link{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cac0f3;
+    border-radius: 50%;
+    transition: all linear .3s;
+    cursor: pointer;
+}
+.sc-link i{
+    color: white;
+}
+.sc-link:hover{
+    background-color: white;
+}
+.sc-link:hover i{
+    color: #201353;
+}
+
+/* footer css ends */
