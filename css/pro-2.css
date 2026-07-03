@@ -16,9 +16,13 @@ a{
 p{
     margin: 0;
 }
+/* header{
+    position: sticky;
+    top: 39px;
+    z-index: 999;
+} */
 .cmmn-btn{
-    width: 138px;
-    height: 54px;
+    padding: 16px 40px;
     background-color: rgba(98, 69, 213, 0.2);
     color: #192252;
     border: none;
@@ -47,15 +51,19 @@ p{
 /* navbar starts */
 .menu{
     margin: 39px 120px;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    backdrop-filter: blur(2px);
 }
 .logo img{
-    width: 148px;
+    width: 100%;
 }
 .menu ul{
+    width: 45%;
     display: flex;
+    justify-content: space-between;
     gap: 80px;
 }
 .menu ul li{
@@ -66,18 +74,55 @@ p{
 .menu ul li a{
     color: black;
     transition: all linear .4s;
+    position: relative;
 }
 .menu ul li a:hover{
     color: blue;
+}
+.menu ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    position: absolute;
+    top: 103%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear .3s;
+}
+.menu ul li a:hover::after{
+    width: 105%;
 }
 
 /* navbar ends */
 
 /* banner css starts */
 #banner{
-    margin: 115px 120px 0;
+    /* margin: 115px 120px 0; */
+    margin: 0;
 }
+/* shade css starts */
+.shade-1, .shade-2, .shade-3{
+    position: absolute;
+}
+.shade-1{
+    top: 0;
+    right: 0;
+    z-index: -90;
+}
+.shade-2{
+    top: 0;
+    right: 0%;
+    z-index: -94;
+}
+.shade-3{
+    top: 25%;
+    left: 0;
+    z-index: -94;
+}
+/* shade css ends */
 .banner-part{
+    margin: 115px 120px 0;
     display: flex;
     justify-content: space-between;
     gap: 94px;
@@ -129,8 +174,8 @@ h1{
 .counter-sec{
     margin: 100px 0 32px;
     padding: 48px;
-    width: 1240px;
-    height: 154px;
+    width: 100%;
+    max-width: 1240px;
     background-color: rgba(255, 255, 255, 0.08);
     color: white;
     display: flex;
@@ -189,9 +234,9 @@ p.dash{
     gap: 24px;
 }
 .cards{
-    padding: 24px;
-    width: 368px;
-    height: 188px;
+    padding: 30px;
+    width: 100%;
+    max-width: 368px;
     background-color: #2c1a74;
     border-radius: 16px;
     transition: all linear .3s;
@@ -290,26 +335,15 @@ p.dash{
     margin-top: 100px;
 }
 .video img{
-    width: 600px;
+    max-width: 600px;
     height: 600px;
     object-fit: cover;
     border-radius: 24px;
+    transition: all ease-in-out 1s;
 }
-/* .play-btn{
-    width: 120px;
-    height: 120px;
-    background-color: #6d6d6d;
-    border-radius: 50%;
-    position: relative;
+.video img:hover{
+    transform: rotateY(180deg);
 }
-.play-btn i{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 40px;
-    color: #192252;
-    transform: translate(-50%, -50%);
-} */
 .offer-details h2{
     margin-top: 30px;
     width: 514px;
@@ -320,7 +354,7 @@ p.dash{
 }
 .offer-details p{
     margin-top: 24px;
-    width: 421px;
+    max-width: 421px;
     color: #848fac;
     font-size: 18px;
     font-weight: 500;
@@ -364,11 +398,20 @@ p.dash{
 .companies{
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 100px;
 }
 .company{
-    width: 140px;
+    width: 100%;
     object-fit: cover;
+}
+.company1, .company5{
+    max-width: 90px;
+}
+.company2, .company4{
+    max-width: 100px;
+}
+.company3{
+    max-width: 150px;
 }
 
 /* pay & recieve css ends */
@@ -402,7 +445,6 @@ p.dash{
     margin-top: 24px;
     padding: 24px;
     width: 515px;
-    height: 118px;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -414,6 +456,7 @@ p.dash{
 }
 .packages:hover{
     background-color: #6245d5;
+    transform: translateY(-15%);
 }
 .para{
     display: flex;
@@ -626,23 +669,33 @@ p.dash{
     border: 1.5px solid rgba(255, 255, 255, 0.65);
     border-radius: 50%;
     cursor: pointer;
+    transition: all linear .3s;
 }
 .review-slider-btn i{
     color: white;
     font-size: 22px;
 }
+.review-slider-btn:hover{
+    background-color: white;
+}
+.review-slider-btn:hover i{
+    color: #192252;
+}
+
+/* form starts */
 .form-sec{
     margin-top: 124px;    
     padding: 80px;
     width: 600px;
-    height: 678px;
     background-color: rgba(255, 255, 255, 0.12);
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     gap: 24px;
     flex-direction: column;
     border-radius: 24px;
+}
+.form-sec img{
+    width: 16%;
 }
 .form-sec h3{
     color: white;
@@ -693,8 +746,6 @@ p.dash{
 }
 .form-btn{
     margin-top: 16px;
-    width: 440px;
-    height: 64px;
     background-color: rgba(252, 152, 112, 0.3);
     color: white;
     border: none;
@@ -710,7 +761,24 @@ p.dash{
 }
 .free-trial a{
     color: white;
+    position: relative;
 }
+.free-trial a::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear .3s;
+}
+.free-trial a:hover::after{
+    width: 105%;
+}
+
+/* form ends */
 
 /* review css ends */
 
@@ -726,9 +794,12 @@ footer{
     justify-content: space-between;
     align-items: flex-start;
 }
+.foot-img img{
+    width: 58%;
+}
 .foot-img p{
     margin-top: 8px;
-    width: 332px;
+    max-width: 332px;
     color: rgba(255, 255, 255, 0.64);
     font-size: 18px;
     font-weight: 500;
@@ -758,6 +829,21 @@ footer{
     font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
+    position: relative;
+}
+.links ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear .3s;
+}
+.links ul li a:hover::after{
+    width: 105%;
 }
 .copyright-sec{
     margin: 36px 0;
